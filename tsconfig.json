@@ -1,0 +1,81 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */
+    "module": "esnext",                       /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],                                        /* Specify library files to be included in the compilation. */
+    "allowJs": true,                          /* Allow javascript files to be compiled. */
+    // "checkJs": true,                       /* Report errors in .js files. */
+    "jsx": "react",                           /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+    // "jsxFactory": "react",                 /* 指定生成目标为react JSX时，使用的JSX工厂函数，比如 React.createElement或 h */
+    // "declaration": true,                   /* Generates corresponding '.d.ts' file.但是declaration和allowJs不能同时设为true */
+    // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
+    "sourceMap": true,                        /* Generates corresponding '.map' file. */
+    // "outFile": "./",                       /* Concatenate and emit output to single file.但是要注意，只有设置module的值为amd和system模块时才支持这个配置 */
+    "outDir": "./dist",                       /* Redirect output structure to the directory. */
+    // "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    // "composite": true,                     /* Enable project compilation */
+    // "incremental": true,                   /* Enable incremental compilation 通过从以前的编译中读取/写入信息到磁盘上的文件来启用增量编译 */
+    // "tsBuildInfoFile": "./",               /* Specify file to store incremental compilation information */
+    // "removeComments": true,                /* Do not emit comments to output. */
+    // "noEmit": true,                        /* Do not emit outputs. 不输出(意思是不编译代码，只执行类型检查) */
+    // "importHelpers": true,                 /* Import emit helpers from 'tslib'. */
+    // "downlevelIteration": true,            /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
+    "isolatedModules": true,                  /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,                           /* Enable all strict type-checking options. 开启所有的严格检查 */
+    // "noImplicitAny": true,                 /* 如果我们没有为一些值设置明确的类型，编译器会默认认为这个值为any，如果noImplicitAny的值为true的话。则没有明确的类型会报错。 */
+    "strictNullChecks": true,                 /* Enable strict null checks. null 和 undefined 只能赋值给 void 和它们各自，可以规避非常多的问题。 */
+    // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
+    // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
+    // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes.确保类的非 undefined 属性已经在构造函数里初始化，若要令此选项生效，需要同时启用 --strictNullChecks */
+    "noImplicitThis": true,                   /* Raise error on 'this' expressions with an implied 'any' type. */
+    // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
+
+    /* Additional Checks */
+    // "noUnusedLocals": true,                /* Report errors on unused locals.当一个变量声明，但未使用则抛错 */
+    // "noUnusedParameters": true,            /* Report errors on unused parameters.当一个参数声明后没使用，也报错 */
+    "noImplicitReturns": true,                /* Report error when not all code paths in function return a value. */
+    // "noFallthroughCasesInSwitch": true,    /* Report errors for fallthrough cases in switch statement.当 switch 中没有使用 break 跳出时报错 */
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",               /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    "baseUrl": ".",                           /* Base directory to resolve non-absolute module names. */
+    "paths": {
+      // 这里的路径后面必须跟着 "/*"
+      "@": ["src/*"],
+      // "@ant-design/icons/lib/dist$": ["src/icons.js"], // 好像不用了
+      "@components/*": ["src/components/*"],
+      "_img/*": ["src/assets/img/*"]
+    },                                        /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+    // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
+    // "typeRoots": [],                       /* List of folders to include type definitions from. */
+    // "types": [],                           /* Type declaration files to be included in compilation. */
+    "allowSyntheticDefaultImports": true,     /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
+    "esModuleInterop": true,                  /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    // "preserveSymlinks": true,              /* Do not resolve the real path of symlinks. */
+    /* Source Map Options */
+    // "sourceRoot": "",                      /* Specify the location where debugger should locate TypeScript files instead of source locations. */
+    // "mapRoot": "",                         /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "inlineSourceMap": true,               /* Emit a single file with source maps instead of having a separate file. */
+    // "inlineSources": true,                 /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
+
+    /* Experimental Options */
+    "experimentalDecorators": true,           /* Enables experimental support for ES7 decorators. */
+    // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
